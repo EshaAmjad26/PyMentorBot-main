@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Themed Web Page</title>
     <link rel="stylesheet" href="stylee.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </head>
   <body>
     <div class="container">
@@ -32,12 +40,25 @@
           <button class="lesson-item-btn" onclick="Working_with_Lists()">
             Working with Lists
           </button>
-          <button class="lesson-item-btn">if statements</button>
-          <button class="lesson-item-btn">Dictionaries</button>
-          <button class="lesson-item-btn">User Input and while loops</button>
-          <button class="lesson-item-btn">Functions</button>
-          <button class="lesson-item-btn">Classes</button>
-          <button class="lesson-item-btn">File and Exception</button>
+          <button class="lesson-item-btn" onclick=" if_statements()">
+            if statements
+          </button>
+          <button class="lesson-item-btn" onclick="Dictionaries()">
+            Dictionaries
+          </button>
+          <button
+            class="lesson-item-btn"
+            onclick="User_Input_and_while_loops()"
+          >
+            User Input and while loops
+          </button>
+          <button class="lesson-item-btn" onclick="Function1()">
+            Functions
+          </button>
+          <button class="lesson-item-btn" onclick="Classes()">Classes</button>
+          <button class="lesson-item-btn" onclick="File_and_Exception()">
+            File and Exception
+          </button>
           <!-- <button class="lesson-item-btn">testing Your code</button>
           <button class="lesson-item-btn">Lesson 11</button> -->
         </div>
@@ -60,7 +81,7 @@
               id="user-input"
               placeholder="Type your message here..."
             ></textarea>
-            <button class="send-btn" onclick="handleUserInput()">Send</button>
+            <button class="send-btn" onclick="handleUserInput()">send</button>
           </div>
         </div>
       </div>

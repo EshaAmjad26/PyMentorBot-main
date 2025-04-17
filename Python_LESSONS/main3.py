@@ -81,20 +81,52 @@ def get_content_for_topic(topic):
     response = RAG_Chain.invoke({"input": topic})
     return response["answer"]
 
-def Variable_and_dataTypes():
-    user_topic1 = "What is Variable and Data Types in Python also explain with the help of code "
+def getVariableDataTypes():
+    user_topic1 = "What is Variable and Data Types in Python also explain with the help of code but first give code and then text"
     content1 = get_content_for_topic(user_topic1)
     return content1
 
 def Introducing_list():
-    user_topic1 = "How to introduce lists in Python also explain with the help of code "
+    user_topic1 = "How to introduce lists in Python also explain with the help of code but first give code and then text"
     content2 = get_content_for_topic(user_topic1)
     return content2
 
 def Working_with_Lists():
-    user_topic1 = "Explain the working with lists in Python also explain with the help of code "
+    user_topic1 = "Explain the working with lists in Python also explain with the help of code but first give code and then text "
     content3 = get_content_for_topic(user_topic1)
     return content3
+
+def if_statements():
+    user_topic1 = "Explain the if_statements in Python also explain with the help of detail multiple if and if else statements code but first give code and then text "
+    content = get_content_for_topic(user_topic1)
+    return content
+
+def Dictionaries():
+    user_topic1 = "Explain the Dictionaries in Python also explain with the help of detail multiple dictionaries code but first give code and then text "
+    content = get_content_for_topic(user_topic1)
+    return content
+
+def User_Input_and_while_loops():
+    user_topic1 = "Explain the user input and while loop in Python also explain with the help of detail code but first give code and then text "
+    content = get_content_for_topic(user_topic1)
+    return content
+
+def Function1():
+    user_topic1 = "Explain the Function in Python also explain with the help of detail multiple function code but first give code and then text "
+    content = get_content_for_topic(user_topic1)
+    return content
+
+def Classes():
+    user_topic1 = "Explain the Classes in Python also explain with the help of detail multiple classes code but first give code and then text "
+    content = get_content_for_topic(user_topic1)
+    return content
+
+def File_and_Exception():
+    user_topic1 = "Explain the File and Exception in Python also explain with the help of detail code but first give code and then text "
+    content = get_content_for_topic(user_topic1)
+    return content
+    
+
    
 # DELETE
 def main():
