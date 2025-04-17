@@ -61,17 +61,28 @@ function streamResponse(text, element) {
 }
 
 function formatResponse(response) {
-  response = response.replace(/\n/g, "<br>"); // Preserve new lines
-  response = response.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"); // Bold text
+  // Replace **bold text**
+  response = response.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
 
-  // Format Python code blocks
+  // Replace line breaks
+  response = response.replace(/\n/g, "<br>");
+
+  // Format code blocks
   response = response.replace(
-    /```python/g,
-    '<pre><code class="language-python">'
+    /```python([\s\S]*?)```/g,
+    `<div class="code-container"><pre><code class="language-python">$1</code></pre><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>`
   );
-  response = response.replace(/```/g, "</code></pre>");
 
   return response;
+}
+function copyCode(button) {
+  const code = button.previousElementSibling.innerText;
+  navigator.clipboard.writeText(code).then(() => {
+    button.textContent = "Copied!";
+    setTimeout(() => {
+      button.textContent = "Copy";
+    }, 2000);
+  });
 }
 
 function showLessons() {
